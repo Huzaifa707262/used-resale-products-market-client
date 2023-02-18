@@ -1,0 +1,98 @@
+[
+    {
+        "brand": "Yamaha R15 Bike",
+        "originalPrice": "2000",
+        "resalePrice": "1700",
+        "useTime": "1 Years",
+        "location": "Bangladesh, Rajshahi",
+        "seller": "Rasel Hasan",
+        "whenItPosted": "10-2-2023",
+        "description": "Yamaha YZF-R15 V3 is one of the rough & tough bad boys in the motorcycle industry of Bangladesh that looks damn macho and currently it’s one of the highly featured sportbikes in the market.",
+        "image": "https://www.puranbike.com/images/users/4829/1575838318_IMG_20191026_222804.jpg"
+    },
+    {
+        "brand": "Yamaha R15 Bike",
+        "originalPrice": "2000",
+        "resalePrice": "1800",
+        "useTime": "2 Years",
+        "location": "Bangladesh, Jashore",
+        "seller": "Rakib Hasan",
+        "whenItPosted": "10-2-2023",
+        "description": "Yamaha YZF-R15 V3 is one of the rough & tough bad boys in the motorcycle industry of Bangladesh that looks damn macho and currently it’s one of the highly featured sportbikes in the market.",
+        "image": "https://th.bing.com/th/id/OIP.rR4EdhX6d9xSpwRDybEyCAHaEK?w=270&h=180&c=7&r=0&o=5&pid=1.7"
+    },
+    {
+        "brand": "Yamaha R15 Bike",
+        "originalPrice": "2000",
+        "resalePrice": "1500",
+        "useTime": "1 Years",
+        "location": "Bangladesh, Cumilla",
+        "seller": "kader Khan",
+        "whenItPosted": "10-2-2023",
+        "description": "Yamaha YZF-R15 V3 is one of the rough & tough bad boys in the motorcycle industry of Bangladesh that looks damn macho and currently it’s one of the highly featured sportbikes in the market.",
+        "image": "https://th.bing.com/th/id/OIP.pNHfZMk-037IszUxZvKYSgHaFj?w=259&h=193&c=7&r=0&o=5&pid=1.7"
+    },
+    {
+        "brand": "Pulsar Bike",
+        "originalPrice": "1500",
+        "resalePrice": "800",
+        "useTime": "3 Years",
+        "location": "Bangladesh, Vola",
+        "seller": "Ashik Hasan",
+        "whenItPosted": "17-5-2022",
+        "description": "The Bajaj Pulsar is an iconic Indian motorcycle. Since its inception, the Pulsar created a new segment called ‘Sports Biking’ in Indian motorcycling and redefined motorcycle riding for the Indian youth.",
+        "image": "https://th.bing.com/th/id/R.0ca54a825d5e03043c937b83a06c9ba8?rik=%2bHuqMG9KHPio8A&pid=ImgRaw&r=0"
+    },
+    {
+        "brand": "Pulsar Bike",
+        "originalPrice": "1500",
+        "resalePrice": "900",
+        "useTime": "2 Years",
+        "location": "Bangladesh, Gazipur",
+        "seller": "Jahid Hasan",
+        "whenItPosted": "17-5-2022",
+        "description": "The Bajaj Pulsar is an iconic Indian motorcycle. Since its inception, the Pulsar created a new segment called ‘Sports Biking’ in Indian motorcycling and redefined motorcycle riding for the Indian youth.",
+        "image": "https://th.bing.com/th/id/OIP.VSNDSy-_szKl_kZQsF4dKwHaFj?w=206&h=180&c=7&r=0&o=5&pid=1.7"
+    },
+    {
+        "brand": "Pulsar Bike",
+        "originalPrice": "1500",
+        "resalePrice": "700",
+        "useTime": "1 Years",
+        "location": "Bangladesh, Vola",
+        "seller": "Sumon Hasan",
+        "whenItPosted": "17-5-2022",
+        "description": "The Bajaj Pulsar is an iconic Indian motorcycle. Since its inception, the Pulsar created a new segment called ‘Sports Biking’ in Indian motorcycling and redefined motorcycle riding for the Indian youth.",
+        "image": "https://th.bing.com/th/id/OIP.9vJd4cInxE8_1TMMi3ChaAHaEK?w=324&h=182&c=7&r=0&o=5&pid=1.7"
+    },
+    {
+        "brand": "Suzuki Bike",
+        "originalPrice": 1800,
+        "resalePrice": 1200,
+        "location": "Bangladesh, Bogura",
+        "useTime": "One Years",
+        "seller": "Rabbi Hasan",
+        "whenItPosted": "14-4-2021",
+        "image": "https://th.bing.com/th/id/OIP.GqLpgjbFtb5a8hKikcJTPQHaE3?w=303&h=199&c=7&r=0&o=5&pid=1.7"
+    },
+    {
+        "brand": "Suzuki Bike",
+        "originalPrice": 1800,
+        "resalePrice": 900,
+        "location": "Bangladesh, Dhaka",
+        "useTime": "Two Years",
+        "seller": "Jakir Hasan",
+        "whenItPosted": "14-4-2021",
+        "image": "https://th.bing.com/th/id/OIP.x7DbaR4oNMxt6TQ3kZh2xwHaFj?w=237&h=180&c=7&r=0&o=5&pid=1.7"
+    },
+    {
+        "brand": "Suzuki Bike",
+        "originalPrice": 1800,
+        "resalePrice": 1000,
+        "location": "Bangladesh,Khulna",
+        "useTime": "One Years",
+        "seller": "Rahad Khan",
+        "whenItPosted": "14-4-2021",
+        "image": "https://th.bing.com/th/id/OIP.7MoWY2fCtitEI6I-vCXvIQHaE8?w=251&h=180&c=7&r=0&o=5&pid=1.7"
+    }
+]
