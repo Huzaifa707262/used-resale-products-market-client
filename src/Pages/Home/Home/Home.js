@@ -1,14 +1,13 @@
 import React from 'react';
-import Advertised from '../Advertised/Advertised';
 import Banner from '../Banner/Banner';
-import Category from '../Categoty/Category';
+import Category from '../Category/Category';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <Category></Category>
-            <Advertised></Advertised>
+
             <section>
                 <h2 className='text-2xl text-purple-600'>About Resale Market Place</h2>
                 <div className="card card-side bg-base-100 shadow-xl">

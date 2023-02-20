@@ -8,7 +8,7 @@ const AllSeller = () => {
     const { data: sellers = [], refetch, isLoading } = useQuery({
         queryKey: ['seller'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/seller')
+            const res = await fetch('https://y-alpha-sage.vercel.app/seller')
             const data = await res.json()
             return data
 
@@ -16,7 +16,7 @@ const AllSeller = () => {
     })
 
     const sellerDelete = (id) => {
-        fetch(`http://localhost:5000/seller/${id}`, {
+        fetch(`https://y-alpha-sage.vercel.app/seller/${id}`, {
             method: 'DELETE',
 
         })

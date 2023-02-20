@@ -7,14 +7,14 @@ const Alluser = () => {
     const { data: users = [], refetch, isLoading } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch("http://localhost:5000/users");
+            const res = await fetch("https://y-alpha-sage.vercel.app/users");
             const data = await res.json();
             return data;
         }
     });
 
     const handleAdmin = (id) => {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://y-alpha-sage.vercel.app/users/admin/${id}`, {
             method: "PUT",
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -33,6 +33,7 @@ const Alluser = () => {
     if (isLoading) {
         return <Loading></Loading>
     }
+    refetch();
     return (
         <div className="overflow-x-auto">
             <table className="table w-full">

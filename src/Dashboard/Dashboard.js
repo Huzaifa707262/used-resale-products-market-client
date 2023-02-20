@@ -1,11 +1,11 @@
 import React from 'react';
-import Alluser from './Alluser';
+
 
 
 const Dashboard = () => {
     return (
         <div>
-            <Alluser></Alluser>
+            <h1 className='text-3xl text-pink-600'>Welcome to Dashboard</h1>
         </div>
     );
 };

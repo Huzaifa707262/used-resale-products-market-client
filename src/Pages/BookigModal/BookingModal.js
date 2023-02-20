@@ -25,7 +25,7 @@ const BookingModal = ({ modals, setModals }) => {
             price
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://y-alpha-sage.vercel.app/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

@@ -9,15 +9,18 @@ const DashboardLayout = () => {
     const email = user?.email
 
 
+
     useEffect(() => {
 
-        fetch(`http://localhost:5000/users/admin/${email}`)
+        fetch(`https://y-alpha-sage.vercel.app/users/admin/${email}`)
             .then(res => res.json())
             .then(data => {
                 setIsAdmin(data.isAdmin)
             });
 
     }, [email]);
+
+
     return (
         <section>
             <Navbar></Navbar>
@@ -31,7 +34,12 @@ const DashboardLayout = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80   text-base-content">
                         <li><Link to="/dashboardLayout/dashboard/myOrders">My Orders</Link></li>
-                        <li><Link to="/dashboardLayout/dashboard/addProduct">Add A Products</Link></li>
+
+                        <>
+                            <li><Link to="/dashboardLayout/dashboard/addProduct">Add A Products</Link></li>
+                            <li><Link to="/dashboardLayout/dashboard/myProducts">My Products</Link></li>
+                        </>
+
                         {
                             isAdmin &&
                             <>

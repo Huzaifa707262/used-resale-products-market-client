@@ -46,7 +46,7 @@ const SignUp = () => {
 
     const userData = (name, email) => {
         const user = { name, email };
-        fetch('http://localhost:5000/users', {
+        fetch('https://y-alpha-sage.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

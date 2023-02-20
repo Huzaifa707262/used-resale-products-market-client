@@ -14,12 +14,12 @@ const Payment = () => {
     const { data: bookings = [], } = useQuery({
         queryKey: ['booking'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/booking')
+            const res = await fetch('https://y-alpha-sage.vercel.app/booking')
             const data = await res.json()
             console.log(data);
             return data
         }
-    })
+    });
     // if (navigation.state === "loading") {
     //     return <Loading></Loading>
     // }

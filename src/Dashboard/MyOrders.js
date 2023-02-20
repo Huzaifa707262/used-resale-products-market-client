@@ -21,7 +21,7 @@ const MyOrders = () => {
     const { data: orders = [], refetch, isLoading, isError } = useQuery({
         queryKey: ["orders"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+            const res = await fetch(`https://y-alpha-sage.vercel.app/orders?email=${user?.email}`, {
                 headers: {
                     authorization: `bearer ${localStorage.getItem('accessToken')}`
                 }
@@ -31,19 +31,9 @@ const MyOrders = () => {
         }
     });
 
-    const AdvertiseData = (id) => {
-        fetch(`http://localhost:5000/orders/${id}`)
-            .then(res => res.json())
-            .then(data => {
-
-                setAdvertise(data)
-            })
-    }
-
-
 
     const successDelete = (deleteOrder) => {
-        fetch(`http://localhost:5000/orders/${deleteOrder._id}`, {
+        fetch(`https://y-alpha-sage.vercel.app/orders/${deleteOrder._id}`, {
             method: 'DELETE',
 
         })
@@ -75,7 +65,7 @@ const MyOrders = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Price</th>
-                        <th>Advertised</th>
+                        <th>Payment</th>
                         <th>Delete</th>
                     </tr>
                 </thead>

@@ -1,29 +1,27 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
 import { toast } from 'react-hot-toast';
 import Loading from '../Loading/Loading';
 
-const AllBuyer = () => {
 
-    const { data: buyers = [], refetch, isLoading } = useQuery({
-        queryKey: ['buyer'],
+const MyProduct = () => {
+
+
+    const { data: myProducts = [], isLoading, refetch } = useQuery({
+        queryKey: ['products'],
         queryFn: async () => {
-            const res = await fetch('https://y-alpha-sage.vercel.app/buyer')
-            const data = await res.json()
-            console.log(data);
-            return data
+            const res = await fetch("https://y-alpha-sage.vercel.app/products");
+            const data = await res.json();
+            return data;
         }
-    })
+    });
 
-    const buyerDelete = (id) => {
-        fetch(`https://y-alpha-sage.vercel.app/buyer/${id}`, {
+    const handleDelete = (id) => {
+        fetch(`https://y-alpha-sage.vercel.app/seller/${id}`, {
             method: 'DELETE',
 
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
-
                 if (result.deletedCount > 0) {
                     refetch();
                     toast.success(`${result.productName} deleted successfully`)
@@ -31,9 +29,13 @@ const AllBuyer = () => {
             })
     }
 
+
+
+
     if (isLoading) {
         return <Loading></Loading>
     }
+
     return (
         <div className="overflow-x-auto">
             <table className="table w-full">
@@ -42,25 +44,28 @@ const AllBuyer = () => {
                     <tr>
                         <th></th>
                         <th>Name</th>
-                        <th>Email</th>
                         <th>Product</th>
+                        <th>Price</th>
+                        <th>Advertised</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        buyers.map((buyer, i) => <tr key={buyer._id}>
+                        myProducts.map((product, i) => <tr key={product._id}>
                             <th>{i + 1}</th>
-                            <td>{buyer.userName}</td>
-                            <td>{buyer.email}</td>
-                            <td>{buyer.productName}</td>
-                            <td><button onClick={() => buyerDelete(buyer._id)} className='btn btn-xs'>Delete</button></td>
+                            <td>{product.sellerName}</td>
+                            <td>{product.productName}</td>
+                            <td>${product.resalePrice}</td>
+                            <td><button className='btn btn-xs btn-info'>Advertised</button></td>
+                            <td><button onClick={() => handleDelete(product._id)} className='btn btn-xs'>Delete</button></td>
                         </tr>)
                     }
+
                 </tbody>
             </table>
         </div>
     );
 };
 
-export default AllBuyer;
+export default MyProduct;

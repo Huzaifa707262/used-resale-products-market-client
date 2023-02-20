@@ -1,16 +1,19 @@
 import { useQuery } from '@tanstack/react-query';
+import { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthContext/AuthProvider';
 
 
 
 const AddProduct = () => {
     const navigate = useNavigate();
 
+
     const { data: specialties = [], } = useQuery({
         queryKey: ["specialty"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/specialty`)
+            const res = await fetch(`https://y-alpha-sage.vercel.app/specialty`)
             const data = await res.json();
             return data;
         }
@@ -32,6 +35,7 @@ const AddProduct = () => {
         const location = form.location.value;
 
         const orders = {
+
             brand,
             productName,
             productPhoto,
@@ -42,9 +46,10 @@ const AddProduct = () => {
             sellerName,
             whenItPosted,
             useTime,
+
         }
 
-        fetch('http://localhost:5000/addProduct', {
+        fetch('https://y-alpha-sage.vercel.app/addProduct', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -54,6 +59,7 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+
                 if (data.acknowledged) {
                     toast.success("Add Product successfully");
                     navigate('/')
@@ -63,9 +69,9 @@ const AddProduct = () => {
                 }
 
             })
-
-
     }
+
+
     return (
         <div>
             <form onSubmit={handleSubmit} >
