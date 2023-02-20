@@ -7,6 +7,9 @@ const Main = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <div>
+                <marquee className='py-4 px-8 text-2xl text-orange-600'>Up to 10% off buy any bike with a small gift</marquee>
+            </div>
             <div className='ml-4 mr-4 mt-5'>
                 <Outlet></Outlet>
                 <Footer></Footer>

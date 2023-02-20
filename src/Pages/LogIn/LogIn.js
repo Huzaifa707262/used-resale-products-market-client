@@ -8,7 +8,6 @@ const LogIn = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [loginError, setLoginError] = useState('')
-    const [loginUserEmail, setLoginUserEmail] = useState('');
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -21,8 +20,9 @@ const LogIn = () => {
         login(data.email, data.password)
             .then(result => {
                 const user = result.user;
+                const email = user.email;
+                getToken(email)
                 console.log(user);
-                setLoginUserEmail(data.email);
                 navigate(from, { replace: true });
             })
             .catch(error => {
@@ -35,9 +35,22 @@ const LogIn = () => {
         googleSignIn()
             .then(result => {
                 const user = result.user;
+                const email = user.email;
+                getToken(email)
                 console.log(user);
             })
             .catch(error => console.error(error))
+    }
+
+    const getToken = (email) => {
+        fetch(`http://localhost:5000/jwt?email=${email}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.accessToken) {
+                    localStorage.setItem('accessToken', data.accessToken)
+                }
+            })
     }
     return (
         <div className='h-[400px] flex justify-center items-center mb-12 mt-12'>

@@ -9,7 +9,6 @@ const SignUp = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [signUpError, setSignUpError] = useState('');
-    const [createUserEmail, setCreateUserEmail] = useState('');
     const navigate = useNavigate();
 
     const handleSignUp = (data) => {
@@ -25,7 +24,7 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        navigate('/')
+                        userData(data.name, data.email)
                     })
                     .catch(err => console.error(err));
             })
@@ -40,9 +39,24 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate('/')
+
             })
             .catch(error => console.error(error))
+    }
+
+    const userData = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                navigate('/')
+            })
     }
     return (
         <div className='h-[500px] flex justify-center items-center mb-12 mt-12'>

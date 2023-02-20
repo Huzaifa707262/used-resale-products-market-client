@@ -1,6 +1,4 @@
-import { async } from '@firebase/util';
 import { useQuery } from '@tanstack/react-query';
-import React, { useEffect, useState } from 'react';
 import CategoryCard from './CategoryCard';
 
 const Category = () => {
@@ -18,7 +16,7 @@ const Category = () => {
         <div className='grid lg:grid-cols-3 gap-3 mt-8 md:grid-cols-2 grid-cols-1'>
             {
                 categories.map(category => <CategoryCard
-                    key={category.id}
+                    key={category._id}
                     category={category}
                 ></CategoryCard>)
             }
