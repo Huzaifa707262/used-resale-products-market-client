@@ -74,6 +74,7 @@ const AddProduct = () => {
 
     return (
         <div>
+            <h1 className='text-xl text-center mb-8'>Add Your Product</h1>
             <form onSubmit={handleSubmit} >
                 <section className="grid lg:grid-cols-2">
                     <div className="form-control w-full max-w-xs">

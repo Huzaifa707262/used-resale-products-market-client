@@ -36,6 +36,7 @@ const Alluser = () => {
     refetch();
     return (
         <div className="overflow-x-auto">
+            <h2 className='text-xl'>All Users:</h2>
             <table className="table w-full">
 
                 <thead>

@@ -11,7 +11,7 @@ import DeleteModal from './DeleteModal';
 const MyOrders = () => {
     const { user } = useContext(AuthContext);
     const [actionDelete, setActionDelete] = useState(null);
-    const [advertise, setAdvertise] = useState({})
+
 
 
     const closeModal = () => {
@@ -43,7 +43,7 @@ const MyOrders = () => {
 
                 if (result.deletedCount > 0) {
                     refetch();
-                    toast.success(`${deleteOrder.productName} deleted successfully`)
+                    toast.success(` Deleted successfully`)
                     setActionDelete(null)
                 }
             })
@@ -57,6 +57,7 @@ const MyOrders = () => {
     }
     return (
         <div className="overflow-x-auto">
+            <h2 className='text-xl'>My Orders:</h2>
             <table className="table w-full">
 
                 <thead>

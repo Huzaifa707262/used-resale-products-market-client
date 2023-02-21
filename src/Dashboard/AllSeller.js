@@ -26,7 +26,7 @@ const AllSeller = () => {
 
                 if (result.deletedCount > 0) {
                     refetch();
-                    toast.success(`${result.productName} deleted successfully`)
+                    toast.success(`Deleted successfully`)
                 }
             })
     }
@@ -37,6 +37,7 @@ const AllSeller = () => {
 
     return (
         <div className="overflow-x-auto">
+            <h2 className='text-xl'>All Sellers:</h2>
             <table className="table w-full">
 
                 <thead>
